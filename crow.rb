@@ -13,6 +13,7 @@ class Crow < Formula
   depends_on "crystal-lang" => :build
 
   def install
+    system "mkdir -p build"
     system "crystal deps"
     system "bin/build"
     bin.install "build/crow"
